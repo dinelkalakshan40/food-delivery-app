@@ -1,8 +1,11 @@
+import Header from "../components/Header.jsx";
 
 
 const Home=()=>{
     return(
-        <div>Home</div>
+        <main className="container">
+            <Header/>
+        </main>
     )
 }
 export default Home;
