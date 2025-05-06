@@ -24,3 +24,9 @@
 .scroll-icon{
     color: tomato;
 }
+.explore-menu hr{
+    margin:10px 0px;
+    height: 2px;
+    background-color: #526a6a;
+    border: none;
+}

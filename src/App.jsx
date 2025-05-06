@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
 import ExploreFood from "./pages/ExploreFood.jsx";
 import Header from "./components/Header.jsx";
+import FoodDetails from "./pages/FoodDetails.jsx";
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
       <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/contact' element={<Contact/>}/>
-            <Route path='/Explore' element={<ExploreFood/>}/>
+            <Route path='/explore' element={<ExploreFood/>}/>
+            <Route path='/food/:id' element={<FoodDetails/>}/>
       </Routes>
     </div>
   )
