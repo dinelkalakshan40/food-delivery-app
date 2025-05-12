@@ -2,7 +2,7 @@ import {categories} from "../assets/assets.js";
 import './ExploreMenu.css'
 import {useRef} from "react";
 
-const ExploreMenu=()=>{
+const ExploreMenu=({category,setCategory})=>{
     const menuRef =useRef(null);
     const scrollLeft=()=>{
         if (menuRef.current){
@@ -30,8 +30,8 @@ const ExploreMenu=()=>{
                 {
                     categories.map((item, index)=>{
                         return(
-                            <div key={index} className="text-center explore-menu-list-item">
-                                <img src={item.icon} className="rounded-circle" alt="" height={128} width={128}/>
+                            <div key={index} className="text-center explore-menu-list-item" onClick={()=>setCategory(prev =>prev === item.category ? 'All': item.category)}>
+                                <img src={item.icon} className={item.category ===category ? 'rounded-circle active':'rounded-circle'} alt="" height={128} width={128}/>
                                 <p className="mt-2 fw-bold">{item.category}</p>
                             </div>
                         )

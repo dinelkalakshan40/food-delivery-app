@@ -17,7 +17,7 @@ export const categories=[
         icon: biryani
     },
     {
-        category:'Burger',
+        category:'Buger',
         icon:buger
     },
     {
@@ -29,7 +29,7 @@ export const categories=[
         icon: pizza
     },
     {
-        category: 'Ice Creams',
+        category: 'Ice cream',
         icon: icecream
     }
 ]
