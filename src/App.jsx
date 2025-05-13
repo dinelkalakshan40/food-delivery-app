@@ -7,6 +7,7 @@ import ExploreFood from "./pages/ExploreFood.jsx";
 import Header from "./components/Header.jsx";
 import FoodDetails from "./pages/FoodDetails.jsx";
 import Cart from "./pages/Cart.jsx";
+import PlaceOrder from "./pages/PlaceOrder.jsx";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/explore' element={<ExploreFood/>}/>
             <Route path='/food/:id' element={<FoodDetails/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/order' element={<PlaceOrder/>}/>
       </Routes>
     </div>
   )
