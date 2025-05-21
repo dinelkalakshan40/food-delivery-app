@@ -8,6 +8,8 @@ import Header from "./components/Header.jsx";
 import FoodDetails from "./pages/FoodDetails.jsx";
 import Cart from "./pages/Cart.jsx";
 import PlaceOrder from "./pages/PlaceOrder.jsx";
+import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
             <Route path='/food/:id' element={<FoodDetails/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/order' element={<PlaceOrder/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
       </Routes>
     </div>
   )
