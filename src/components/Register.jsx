@@ -1,8 +1,12 @@
 import './Register.css'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
+import {registerUser} from "../service/authService.js";
+import {toast} from "react-toastify";
 
 const Register=()=>{
+
+    const navigate =useNavigate();
 
     const [data,setData]=useState({
         name:'',
@@ -16,9 +20,20 @@ const Register=()=>{
         setData(data=>({...data,[name]:value}))
     }
 
-    const onSubmitHandler=(event)=>{
+    const onSubmitHandler=async (event)=>{
         event.preventDefault();
-        console.log(data)
+        try {
+            const response =await registerUser(data);
+            if (response.status===200){
+                toast.success("registration completed. Please login");
+                navigate("/login")
+            }else {
+                toast.error("unable to register .please try again")
+            }
+        }catch (error){
+            console.log(error)
+            toast.error("cant login")
+        }
     }
 
     return (
